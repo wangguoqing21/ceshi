@@ -1,0 +1,12 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/604jd
+    username: root
+    password: 123456
+    type: com.alibaba.druid.pool.DruidDataSource
+    
+mybatis-plus:
+  type-aliases-package: com.hp.pojo
+  configuration:
+    map-underscore-to-camel-case: true

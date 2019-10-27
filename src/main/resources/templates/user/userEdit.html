@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<form th:action="@{/updateu}" method="post">
+		用户姓名：<input type="text" name="username" th:value="${user.username}" /><br>
+		用户密码：<input type="text" name="password" th:value="${user.password}" /><br>
+		用户地址：<input type="text" name="address" th:value="${user.address}"/><br>
+		创建日期：<input type="Date" name="createdate" th:value="${#dates.format(user.createdate, 'yyyy-MM-dd')}" /><br>
+		<input type="submit" value="保存"/><br>
+		<input type="hidden" name="id" th:value="${id}" />
+	</form>
+</body>
+</html>

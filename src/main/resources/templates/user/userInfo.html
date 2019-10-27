@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="layui/css/layui.css"  media="all">
+<script type="text/javascript" src="layui/layui.js"></script>
+</head>
+<body>
+<table  class="layui-table">
+		<tr>
+			<td>用户编号</td>
+			<td>用户姓名</td>
+			<td>用户密码</td>
+			<td>创建日期</td>
+			<td>用户地址</td>
+			<td>操作</td>
+		</tr>		
+		<tr th:each="user : ${userlist}">
+			<td th:text=${user.id}></td>
+			<td th:text=${user.username}></td>
+			<td th:text=${user.password}></td>
+			<td th:text="${#dates.format(user.createdate, 'yyyy-MM-dd')}"></td>
+			<td th:text=${user.address}></td>
+			<td><a th:href="@{userEdit(id=${user.id})}">修改</a><a th:href="@{deleteu(id=${user.id})}">删除</a></td>
+		</tr>
+		<tr>
+		<td colspan="6"><a th:href="addym">添加</a></td>
+		</tr>
+	</table>
+</body>
+</html>
