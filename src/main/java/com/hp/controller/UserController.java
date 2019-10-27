@@ -14,6 +14,7 @@ import com.hp.service.IUserService;
 @Controller
 @RequestMapping
 public class UserController {
+	//11
 	@Resource
 	private IUserService userService;
 	
